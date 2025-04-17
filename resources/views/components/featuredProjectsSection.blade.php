@@ -2,7 +2,7 @@
     <div class="container">
       <div class="featured-header">
         <div>
-          <h2>{{ $data['title'] }}</h2>
+          <h2>{{ $featured_projects_section['heading'] }}</h2>
           <p>Proyek pilihan yang merepresentasikan kualitas dan cakupan kerja kami.</p>
         </div>
         <a href="/projects" class="cta-button">Lihat Semua Project</a>

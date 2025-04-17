@@ -19,7 +19,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
 @yield('css')
-@vite('resources/js/app.js')
+{{-- @vite('resources/js/app.js') --}}
 </head>
 <body class="">
 

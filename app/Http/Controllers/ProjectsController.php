@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Projects;
-use App\Models\Services;
+use App\Models\Project;
+use App\Models\Service;
 
 class ProjectsController extends Controller
 {
@@ -12,10 +12,10 @@ class ProjectsController extends Controller
     public function index(Request $request)
     {
         $tagSlug = $request->query('tag'); // ini diasumsikan sebagai ID dari service
-        $services = Services::select('id', 'title')->get();
+        $services = Service::select('id', 'title')->get();
     
         // Mulai query
-        $query = Projects::with('services');
+        $query = Project::with('services');
     
         if ($tagSlug) {
             // Filter berdasarkan ID service yang dipilih

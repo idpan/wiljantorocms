@@ -9,18 +9,19 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('sections', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('page_id')->constrained('pages')->onDelete('cascade');
-            $table->string('title', 255);
-            $table->text('subtitle')->nullable();
-            $table->text('content');
-            $table->string('image_url', 255)->nullable();
+            $table->foreignId('page_id')->constrained()->onDelete('cascade');
+            $table->string('name');
+            $table->string('header')->nullable();
+            $table->text('content')->nullable();
             $table->timestamps();
         });
     }
+    
+    
     /**
      * Reverse the migrations.
      */
